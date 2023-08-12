@@ -1,0 +1,56 @@
+/* C program to figure out the number of students in different marks category*/
+
+#include <stdio.h>
+int main()
+{
+   int n,m=0,cat1=0,cat2=0,cat3=0,cat4=0,cat5=0,cat6=0,cat7=0,cat8=0,cat9=0,cat10=0,cat11=0;
+    printf("Enter the number of students: ");
+    scanf("%d",&n);
+    printf("Enter the marks of the students\n");
+    int i=0;
+    while(i<n)
+    {
+        printf("Enter the mark of student.no:%d - " ,i+1);
+        scanf("%d",&m);
+        if(m<0 || m>100)
+        {
+
+                printf("Mark given for the student.no:%d is invalid enter again the correct one\n");
+                i=i-1;
+        }
+        if(m>=0 && m<=9)
+            cat1++;
+        else  if(m>=10 && m<=19)
+            cat2++;
+        else if(m>=20 && m<=29)
+            cat3++;
+        else if(m>=30 && m<=39)
+            cat4++;
+        else if(m>=40 && m<=49)
+            cat5++;
+        else if(m>=50 &&m<=59)
+            cat6++;
+        else if(m>=60 && m<=69)
+            cat7++;
+        else if(m>=70 && m<=79)
+            cat8++;
+        else if(m>=80 && m<=89)
+            cat9++;
+        else if(m>=90 && m<=99)
+            cat10++;
+        else if(m==100)
+            cat11++;
+        i++;
+    }
+    printf("0-9 : %d\n",cat1);
+    printf("10-19 : %d\n",cat2);
+    printf("20-29 : %d\n",cat3);
+    printf("30-39 : %d\n",cat4);
+    printf("40-49 : %d\n",cat5);
+    printf("50-59 : %d\n",cat6);
+    printf("60-69 : %d\n",cat7);
+    printf("70-79 : %d\n",cat8);
+    printf("80-89 : %d\n",cat9);
+    printf("90-99 : %d\n",cat10);
+    printf("100 : %d\n",cat11);
+}

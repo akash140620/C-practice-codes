@@ -1,0 +1,27 @@
+
+/* C program to validate the braces*/
+
+#include <stdio.h>
+#include<string.h>
+int main(){
+   int i,count1=0,count2=0;
+   char arr[20];
+   printf("Enter the input: ");
+   scanf("%[^\n]",&arr);
+   int len=strlen(arr);
+   for(i=0;i<len;i++){
+      if(arr[i]=='{')
+         count1++;
+      else if(arr[i]=='}')
+         count1--;
+      else if(arr[i]==']')
+         count2++;
+      else if(arr[i]=='[')
+         count2--;
+   }
+   if(count1==0 && count2==0)
+      printf("Braces are properly opened and closed\n");
+   else
+      printf("%s is not properly opened or closed\n",arr);
+   return 0;
+}
